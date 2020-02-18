@@ -1,0 +1,101 @@
+<!--
+	Author: Jordan Ho
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>CS 333 HW 1</title>
+<!-- 
+	External Citation:
+	Date: 31 August 2019
+	Problem: Did not know how to link the css file to the html 
+	Resource: https://www.w3schools.com/css/css_howto.asp
+	Solution: Added the link element
+	-->
+<link rel="stylesheet" type="text/css" href="stylesheets/hojo21.css">
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"/>
+</script>
+</head>
+<!-- Loads scripts saved in the javascripts file -->
+<script src="javascripts/scripts.js"></script>
+<body>
+<!-- Title heading -->
+<h1>Cheesecake Order Form</h1>
+<!-- Cheesecake photo -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="Cheesecake Photo" style="width:200px;height:200px;" id="cakePicture">
+<br>
+<p id="p1">Quantity Topping</p>
+<!-- Drop down menu -->
+<select id="dropQuantity">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+
+<form>
+	<!-- Radio buttons for toppings -->
+	<div id="div1">
+		<input type="radio" id="Plain" name="topping1" value="Plain"
+		checked="checked"> 
+		<label for="Plain">Plain</label>
+		<br>
+	</div>
+
+	<div id="div2"> 
+		<input type="radio"id="Cherry" name="topping1" value="Cherry"> 
+		<label for="Cherry">Cherry</label>
+		<br>
+	</div>
+
+	<div id="div3">
+		<input type="radio" id="Chocolate" name="topping1" value="Chocolate">
+		<label for="Chocolate">Chocolate</label>
+		<br>
+	</div>
+</form>
+
+<!-- Order numbers -->
+<p id="p2">Notes:</p>
+<textarea rows="4" cols="50" placeholder="Enter any special instructions here." id="instruction_text_box"></textarea>
+<br>
+<button id="orderButton" onclick="process_order()">Order</button>
+
+<!-- 
+	External Citation:
+	Date: 8 September 2019
+	Problem: Did not know how to create a hover dropdown menu 
+	Resource: https://www.w3schools.com/howto/howto_css_dropdown.asp
+	Solution: Designed the dropdown menu
+-->
+<!--
+	Hover dropdown menu
+-->
+<h2>Total Orders 
+	<div class="dropdown">
+	<button class="dropbtn" id="month">Jan</button>
+  	<div class="dropdown-content" id="dropContent">
+    	<a href="#">Jan</a>
+    	<a href="#">Feb</a>
+    	<a href="#">Mar</a>
+    	<a href="#">Apr</a>
+    	<a href="#">May</a>
+    	<a href="#">Jun</a>
+    	<a href="#">Jul</a>
+    	<a href="#">Aug</a>
+    	<a href="#">Sep</a>
+    	<a href="#">Oct</a>
+    	<a href="#">Nov</a>
+    	<a href="#">Dec</a>
+  </div>
+</div>
+</h2>
+
+<ul>
+  <li id="cherryID">11 cherry</li>
+  <li id="chocolateID">17 chocolate</li>
+  <li id="plainID">31 plain</li>
+</ul>
+
+</body>
+</html>
