@@ -9,13 +9,13 @@ router.post('/', function(req, res, next){
 	});
 	*/
 
-	database.dbquery("SELECT * FROM ORDERS WHERE MONTH = '"+req.query.MONTH+"'" , function(error, result) {
+	database.dbquery("INSERT INTO ORDERS (ORDERID, MONTH, DAY, QUANTITY, TOPPING, NOTES) VALUES (1234, 'JAN', 12, "+req.query.QUANTITY+", '"+req.query.TOPPING+"', '"+req.query.NOTES+"')", function(error, result) {
 		if(error){
 			console.log(error);
 			return;
 		}
 		else {
-			res.json(result);
+			console.log("order made");
 		}
 	});
 
